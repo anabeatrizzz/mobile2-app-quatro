@@ -1,5 +1,5 @@
 # Lanchonete Ana Banana
-São bem vindas às Joanas, Dianas, Suzanas, Elianas e Marianas.
+São bem-vindas as Joanas, Dianas, Suzanas, Elianas, Marianas e quem mais estiver com fome!
 
 Porém, precisa-se ter grana para poder desfrutar desta cotidiana ação que é se esbaldar na Lanchonete Ana Banana!
 
