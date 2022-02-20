@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
-import CardComida from '../../components/food-card/FoodCard';
+import FoodCard from '../../components/food-card/FoodCard';
 import styles from './Menu.css'
 
 export default function Menu() {
@@ -34,7 +34,7 @@ export default function Menu() {
         <Text style={styles.firstTitleTxt}>LANCHONETE</Text>
         <Text style={styles.secondTitleTxt}>ANA BANANA</Text>
 
-        <CardComida
+        <FoodCard
           callBack={calculatesSubtotal}
           img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/shortcake_1f370.png"
           title="Bolo de banana"
@@ -42,7 +42,7 @@ export default function Menu() {
           price={16.59}
         />
 
-        <CardComida
+        <FoodCard
           callBack={calculatesSubtotal}
           img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/pie_1f967.png"
           title="Torta de banana"
@@ -50,7 +50,7 @@ export default function Menu() {
           price={23.94}
         />
 
-        <CardComida
+        <FoodCard
           callBack={calculatesSubtotal}
           img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/banana_1f34c.png"
           title="Banana"
