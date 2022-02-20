@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
-import CardComida from '../../components/food-card/FoodCard.jsx';
+import CardComida from '../../components/food-card/FoodCard';
 import styles from './Menu.css'
 
 export default function Menu() {
@@ -61,6 +61,7 @@ export default function Menu() {
         <TouchableOpacity
           onPress={handleCompletedPurchase}
           style={styles.btn}
+          testID="completedPurchaseBtn"
         >
           <Text style={styles.btnTxt}>Finalizar</Text>
         </TouchableOpacity>

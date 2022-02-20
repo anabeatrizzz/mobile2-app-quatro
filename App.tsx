@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from './pages/menu/Menu.jsx';
+import Menu from './pages/menu/Menu';
 
 export default function App(){
   return (
