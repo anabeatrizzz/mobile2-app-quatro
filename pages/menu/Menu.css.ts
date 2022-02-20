@@ -1,23 +1,16 @@
 import { StyleSheet } from 'react-native';
 
-const estilos = StyleSheet.create({
-  conteudo: {
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
     backgroundColor: "#ffffb3",
-    padding: 10,
-  },
-  
-  viewHandleItens: {
-    borderWidth: 2,
-    borderRadius: 5,
-    marginBottom: 20,
-    padding: 3,
-    flexDirection: 'row',
-    borderColor: '#e6e600',
-    backgroundColor: '#ffff99'
   },
 
-  textoTituloUm: {
+  content: {
+    padding: 10,
+  },
+
+  firstTitleTxt: {
     marginTop: 150,
     fontSize: 20,
     fontWeight: 'bold',
@@ -30,8 +23,8 @@ const estilos = StyleSheet.create({
       height: 3
     }
   },
-  
-  textoTituloDois: {
+
+  secondTitleTxt: {
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -45,41 +38,19 @@ const estilos = StyleSheet.create({
     }
   },
 
-  imageStyle: {
-    width: 100,
-    height: 100,
-    marginRight: 10
-  },
-
-  viewDescricao: {
-    width: 240
-  },
-
-  titulo: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    color: '#ffbf00',
-    textShadowColor: '#ffcc00',
-    textShadowRadius: 10,
-    textShadowOffset: {
-      width: 2,
-      height: 2
-    }
-  },
-
-  botao: {
+  btn: {
     alignItems: "center",
     backgroundColor: "#ff6600",
     padding: 10,
     borderRadius: 5,
   },
 
-  textoBotao: {
+  btnTxt: {
     color: '#fff0e6',
     fontWeight: 'bold'
   },
 
-  textoSubtotal: {
+  subtotalTxt: {
     color: '#ff6600',
     textShadowColor: '#ffb380',
     textShadowRadius: 5,
@@ -89,7 +60,7 @@ const estilos = StyleSheet.create({
     }
   },
 
-  textoValor: {
+  valueTxt: {
     color: '#ffbf00',
     textShadowColor: '#ffcc00',
     textShadowRadius: 5,
@@ -97,7 +68,13 @@ const estilos = StyleSheet.create({
       width: 3,
       height: 3
     }
+  },
+
+  subtotalTxtView: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold'
   }
 })
 
-export default estilos;
+export default styles;
