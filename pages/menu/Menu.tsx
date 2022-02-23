@@ -34,29 +34,35 @@ export default function Menu() {
         <Text style={styles.firstTitleTxt}>LANCHONETE</Text>
         <Text style={styles.secondTitleTxt}>ANA BANANA</Text>
 
-        <FoodCard
-          callBack={calculatesSubtotal}
-          img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/shortcake_1f370.png"
-          title="Bolo de banana"
-          description="Não seja sacana, experimente agora (por R$16 e 59 centavos) o bolo da Ana Banana."
-          price={16.59}
-        />
+        <View testID="foodCard1">
+          <FoodCard
+            callBack={calculatesSubtotal}
+            img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/shortcake_1f370.png"
+            title="Bolo de banana"
+            description="Não seja sacana, experimente agora (por R$16 e 59 centavos) o bolo da Ana Banana."
+            price={16.59}
+          />
+        </View>
 
-        <FoodCard
-          callBack={calculatesSubtotal}
-          img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/pie_1f967.png"
-          title="Torta de banana"
-          description="Tal torta não te esgana nem te engana, é feita de banana na lanchonete da Ana Banana!"
-          price={23.94}
-        />
+        <View testID="foodCard2">
+          <FoodCard
+            callBack={calculatesSubtotal}
+            img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/pie_1f967.png"
+            title="Torta de banana"
+            description="Tal torta não te esgana nem te engana, é feita de banana na lanchonete da Ana Banana!"
+            price={23.94}
+          />
+        </View>
 
-        <FoodCard
-          callBack={calculatesSubtotal}
-          img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/banana_1f34c.png"
-          title="Banana"
-          description="A iguaria mundana também é o ingrediente essencial da lanchonete da Ana Banana."
-          price={31.28}
-        />
+        <View testID="foodCard3">
+          <FoodCard
+            callBack={calculatesSubtotal}
+            img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/banana_1f34c.png"
+            title="Banana"
+            description="A iguaria mundana também é o ingrediente essencial da lanchonete da Ana Banana."
+            price={31.28}
+          />
+        </View>
 
         <TouchableOpacity
           onPress={handleCompletedPurchase}
