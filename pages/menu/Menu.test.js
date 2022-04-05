@@ -18,12 +18,18 @@ describe('shows mainly components', () => {
 
 describe('checkboxes behavior', () => {
   it('first one checked when pressed', () => {
-    const { getAllByTestId } = render(<Menu />)
-    const checkboxes = getAllByTestId("checkbox")
+    const { getAllByTestId } = render(<Menu />);
+    const checkboxes = getAllByTestId("checkbox");
+
+    //console.log(checkboxes.length)
 
     const firstCheckbox = checkboxes[0].parent.props.children[0]
-    fireEvent.press(firstCheckbox)
-    const isFirstCheckboxChecked = checkboxes[0].parent.props.children[0].props.checked
-    expect(isFirstCheckboxChecked).toBe(true)
+    //console.log(checkboxes[0]._fiber.stateNode.props)
+    console.log(checkboxes[0])
+
+    // const firstCheckbox = checkboxes[0].parent.props.children[0]
+    fireEvent.press(checkboxes[0])
+    // const isFirstCheckboxChecked = firstCheckbox.props.checked
+    // expect(isFirstCheckboxChecked).toBe(true)
   })
 })

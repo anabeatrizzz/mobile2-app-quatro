@@ -11,6 +11,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffff99'
   },
 
+  price: {
+    fontWeight: "700"
+  },
+
+  checkboxBase: {
+    width: 40,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    borderWidth: 2,
+    margin: 10,
+    borderColor: 'coral',
+    backgroundColor: 'transparent',
+  },
+
+  checkboxChecked: {
+    backgroundColor: 'coral',
+  },
+
   imageStyle: {
     width: 100,
     height: 100,

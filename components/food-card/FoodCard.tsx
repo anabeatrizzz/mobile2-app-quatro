@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
-import { CheckBox } from 'react-native-elements';
+import CheckBox from '../checkbox/CheckBox';
 import styles from './FoodCard.css'
 
 interface IFoodCard {
@@ -14,11 +14,6 @@ interface IFoodCard {
 export default function FoodCard(props: IFoodCard){
   const [checked, setChecked] = useState(false);
 
-  function handleCheckBoxOnPress(){
-    setChecked(!checked)
-    props.callBack(props.price)
-  }
-
   return(
     <View style={styles.viewHandleItens}>
       <Image style={styles.imageStyle} source={{ uri: props.img }} />
@@ -28,17 +23,19 @@ export default function FoodCard(props: IFoodCard){
           <Text>{props.description}</Text>
         </View>
       </View>
-      <View testID="checkbox">
-        {/* <TouchableOpacity testID="checkbox"> */}
+      <View>
+        {/* <TouchableOpacity> */}
           <CheckBox
-            uncheckedColor="#cccc00"
-            size={40}
             checked={checked}
-            checkedColor="#ff6600"
-            onPress={handleCheckBoxOnPress}
+            testID="checkbox"
+            setChecked={setChecked}
+            buttonStyle={styles.checkboxBase}
+            activeButtonStyle={styles.checkboxChecked}
           />
         {/* </TouchableOpacity> */}
-        <Text>R${props.price}</Text>
+        <Text style={styles.price}>
+          R${props.price}
+        </Text>
       </View>
     </View>
   )
