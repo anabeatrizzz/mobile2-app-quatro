@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
-import { render, fireEvent } from '@testing-library/react-native'
+import { render, fireEvent } from '@testing-library/react-native';
+import CheckBox from '../../components/checkbox/CheckBox'
 
 describe('shows mainly components', () => {
   it('completed purchase button', () => {
@@ -17,19 +18,32 @@ describe('shows mainly components', () => {
 })
 
 describe('checkboxes behavior', () => {
-  it('first one checked when pressed', () => {
-    const { getAllByTestId } = render(<Menu />);
-    const checkboxes = getAllByTestId("checkbox");
+  it('checked when pressed', () => {
+    let checked = false;
+    const { getByTestId } = render(
+      <CheckBox
+        checked={checked}
+        setChecked={() => (checked = !checked)}
+        testID="checkbox"
+      />,
+    );
+    const checkBox = getByTestId('checkbox');
+    expect(checked).toBeFalsy();
+    fireEvent(checkBox, 'onClick', { nativeEvent: {} });
+    expect(checked).toBeTruthy();
+  })
+})
 
-    //console.log(checkboxes.length)
+describe('finish button', () => {
+  it('shows subtotal price', () => {
+    const { getByTestId, getAllByTestId } = render(<Menu />)
+    const priceTxt = getByTestId("subtotal")
+    const finishBtn = getByTestId("completedPurchaseBtn")
+    const checkboxes = getAllByTestId("checkbox")
 
-    const firstCheckbox = checkboxes[0].parent.props.children[0]
-    //console.log(checkboxes[0]._fiber.stateNode.props)
-    console.log(checkboxes[0])
+    fireEvent(checkboxes[0], 'onClick', { nativeEvent: {} })
+    fireEvent(finishBtn, 'onClick', { nativeEvent: {} })
 
-    // const firstCheckbox = checkboxes[0].parent.props.children[0]
-    fireEvent.press(checkboxes[0])
-    // const isFirstCheckboxChecked = firstCheckbox.props.checked
-    // expect(isFirstCheckboxChecked).toBe(true)
+    expect(priceTxt).toBeTruthy()
   })
 })

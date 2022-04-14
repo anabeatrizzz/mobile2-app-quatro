@@ -81,7 +81,7 @@ export default function Menu() {
             Subtotal:
           </Text>
           <Text>{' '}</Text>
-          <Text style={styles.valueTxt}>
+          <Text testID="subtotal" style={styles.valueTxt}>
             R${subtotal}
           </Text>
         </Text>
