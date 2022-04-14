@@ -1,8 +1,8 @@
 import React from 'react';
-import Lanchonete from './componentes/Lanchonete.js';
+import Menu from './pages/menu/Menu';
 
 export default function App(){
   return (
-    <Lanchonete />
+    <Menu />
   )
 }
